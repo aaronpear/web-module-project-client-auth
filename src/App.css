@@ -36,17 +36,36 @@
   border-bottom: 2px solid black;
 }
 
-ul {
+.nav-list {
   display: flex;
   width: 45%;
   list-style-type: none;
   justify-content: space-between;
 }
 
-li {
+.friends-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.friend-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  font-size: 25px;
+  align-items: flex-start;
+  align-self: center;
+}
+
+.nav-list-item {
   border: 1px solid black;
   padding: 2% 5%;
   width: 12%;
+}
+
+.friend-list-item {
+  margin: 0.5% 0;
 }
 
 .login {

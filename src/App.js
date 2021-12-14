@@ -3,6 +3,7 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch, Link} from 'react-router-dom';
 
 import Login from './components/Login';
+import FriendsList from './components/FriendsList';
 
 function App() {
   return (
@@ -10,18 +11,21 @@ function App() {
       <div className="App">
         <div className='nav-bar'>
           <h1>Friends Database</h1>
-          <ul>
-            <li>
+          <ul className='nav-list'>
+            <li className='nav-list-item'>
               <Link to='/login'>Login.</Link>
             </li>
-            <li>Friendlist.</li>
-            <li>Addfriend.</li>
-            <li>
+            <li className='nav-list-item'>
+              <Link to='/friends'>Friendlist.</Link>
+            </li>
+            <li className='nav-list-item'>Addfriend.</li>
+            <li className='nav-list-item'>
               <Link to='/logout'>Logout</Link>
             </li>
           </ul>
         </div>
         <Switch>
+          <Route path='/friends' component={FriendsList} />
           <Route path='/login' component={Login} />
         </Switch>
       </div>

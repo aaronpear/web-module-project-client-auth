@@ -29,7 +29,7 @@ const Login = () => {
                 localStorage.setItem('token', token);
                 localStorage.setItem('role', role);
                 localStorage.setItem('username', username);
-                history.push('/friendslist');
+                history.push('/friends');
             })
             .catch((err) => {
                 console.log(err);
